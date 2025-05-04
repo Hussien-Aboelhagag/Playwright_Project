@@ -6,7 +6,7 @@ test('End to End Scenario', async ({ page }) => {
     await homePage.navigateToHomePage('https://www.demoblaze.com/');
     await homePage.navigateToSignup();
     const signupPage = pom.getSignupPage();
-    await signupPage.signupSteps('hussien19', 'hu12345678');
+    await signupPage.signupSteps(`hussien${Date.now()}`, 'hu12345678');
     await homePage.navigateToLogin();
     const loginPage = pom.getLoginPage();
     await loginPage.loginSteps('hussien19', 'hu12345678');
